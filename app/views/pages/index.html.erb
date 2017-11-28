@@ -1,0 +1,78 @@
+<header class="fullscreen-element">
+	<div class="background-image-holder parallax-background overlay">
+		<%= image_tag('bg-7.jpg', class: 'background-image', alt: 'Background') %>
+	</div>
+
+	<div class="container align-vertical hero">
+		<div class="row">
+			<div class="col-md-5 col-sm-5 col-md-offset-7 col-sm-offset-7 text-left">
+				<h1>Healthy & Sweet</h1>
+				<p>Healthy and sweets is your dreams store of eating healthy products that are really sweets. Fruits is our main ingriedient for every product we sell</p>
+				<div class="button-group">
+					<%= link_to 'Shop Now', root_path, class: "btn btn-default" %>
+				</div>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
+</header>
+
+<div class="action-bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<%= link_to root_path do %>
+					<!-- <span data-icon="v" class="icon"></span> -->
+					<span class="text">Sweets</span>
+				<% end %>
+			</div>
+			<div class="col-sm-4">
+				<%= link_to root_path do %>
+					<!-- <span data-icon="/" class="icon"></span> -->
+					<span class="text">Fruits</span>
+				<% end %>
+			</div>
+			<div class="col-sm-4">
+				<%= link_to root_path do %>
+					<!-- <span data-icon="7" class="icon"></span> -->
+					<span class="text">Macarons</span>
+				<% end %>
+			</div>
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div>
+
+<section>
+	<div class="background-image-holder overlay">
+		<%= image_tag("bg-2.jpg", class: "background-image", alt: "Background Image") %>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 text-left">
+				<h2 class="page-title">Our Fruits</h2>
+				<p class="description">Our fruits are always freshly picked from our gardens or imported from our farms in South America. We take pride in all of our sweets and we bake it with extreme attention to detail, making sure thay everything we sell is healthy and meets standards.</p>
+				<%= link_to 'Shop Now', class: 'btn btn-primary' %>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
+</section>
+
+<br>
+
+<h2 class="page-title text-center"> Featured Products </h2>
+
+<%= render 'shared/list' %>
+
+<section>
+	<div class="background-image-holder on-page overlay">
+		<%= image_tag('bg-3.jpg', class: 'background-image', alt: 'Background Image') %>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 col-sm-offset-7 text-right">
+				<h2 class="page-title">Yes, We Deliver!<span class="accent-color">.</span></h2>
+				<p class="description">Ordering online is never easier, with our easy to use online store, you can easily buy any of our amazing goods, and get it delivered at your convienience.</p>
+				<a href="#" class="btn btn-primary">Shop Now</a>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
+</section>
