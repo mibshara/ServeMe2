@@ -10,7 +10,7 @@ class PagesController < ApplicationController
       if params[:search]
       @products = Product.search(params[:search])
       else
-        @products = Product.all
+      @products = Product.all
 
       end
 end
