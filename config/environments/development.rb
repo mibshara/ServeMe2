@@ -61,4 +61,4 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   Braintree::Configuration.private_key = ENV['private_key']
 end
 
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  # Paperclip.options[:command_path] = "/usr/local/bin/"

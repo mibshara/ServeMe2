@@ -108,6 +108,8 @@ GEM
     execjs (2.7.0)
     ffi (1.9.18)
     ffi (1.9.18-x86-mingw32)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
     formtastic (3.1.5)
@@ -275,11 +277,12 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bootstrap-sass
-  braintree (~> 2.80.1)
+  braintree
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  figaro
   font-awesome-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

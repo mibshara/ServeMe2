@@ -18,7 +18,8 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'activeadmin'
 gem 'devise'
 gem 'toastr-rails'
-gem "braintree", "~> 2.80.1"
+gem "braintree"
+gem "figaro"
 
 
 group :development, :test do
