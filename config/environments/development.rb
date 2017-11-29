@@ -54,11 +54,11 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  Braintree::Configuration.environment = :sandbox
+  Braintree::Configuration.merchant_id = ENV['merchant_id']
+  Braintree::Configuration.public_key = ENV['public_key']
+  Braintree::Configuration.private_key = ENV['private_key']
 end
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
-
-  Braintree::Configuration.environment = :sandbox
-  Braintree::Configuration.merchant_id = "use_your_merchant_id"
-  Braintree::Configuration.public_key = "use_your_public_key"
-  Braintree::Configuration.private_key = "use_your_private_key"

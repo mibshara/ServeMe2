@@ -19,7 +19,7 @@
 <br>
 
 <script>
-braintree.setup(CLIENT_TOKEN_FROM_SERVER, 'dropin', {
+braintree.setup('<%= @client_token %>', 'dropin', {
   container: 'payment-form'
 });
 </script>

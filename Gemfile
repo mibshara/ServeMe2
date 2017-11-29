@@ -19,7 +19,6 @@ gem 'activeadmin'
 gem 'devise'
 gem 'toastr-rails'
 gem "braintree", "~> 2.80.1"
-gem "figaro"
 
 
 group :development, :test do
