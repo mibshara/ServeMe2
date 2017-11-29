@@ -5,9 +5,11 @@ class CartsController < ApplicationController
 
   def new
     @cart = Cart.new
+    @categories = Category.all
   end
 
   def show
+      @categories = Category.all
   end
 
   def destroy

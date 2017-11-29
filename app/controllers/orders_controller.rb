@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
 
 	def index
 		@orders = Order.all
+		  @categories = Category.all
 	end
 
 	def new
@@ -38,6 +39,7 @@ class OrdersController < ApplicationController
 	end
 
 	def show
+		 @categories = Category.all
 	end
 
 	def destroy

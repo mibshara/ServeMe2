@@ -9,14 +9,17 @@ class PagesController < ApplicationController
 
   def show
     @product = Product.find(params[:number].to_i)
+      @categories = Category.all
   end
 
   def contact
     @contactPage = Page.find(2)
+      @categories = Category.all
   end
 
   def about
     @aboutPage = Page.find(1)
+      @categories = Category.all
   end
 
 
