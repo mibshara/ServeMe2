@@ -56,4 +56,9 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
 
-Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  Braintree::Configuration.environment = :sandbox
+  Braintree::Configuration.merchant_id = "use_your_merchant_id"
+  Braintree::Configuration.public_key = "use_your_public_key"
+  Braintree::Configuration.private_key = "use_your_private_key"
