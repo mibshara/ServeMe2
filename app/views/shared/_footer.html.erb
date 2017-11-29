@@ -13,11 +13,6 @@
           <%= form_tag(shop_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search Sweets" %>
   <%=submit_tag "Search", :name => nil, :class => "btn btn-primary" %>
-  <%= text_field_tag :category_search, params[:category_search], placeholder: "Search by Category" %>
-<%=submit_tag "Category Search", :name => nil, :class => "btn btn-primary" %>
-
-
-
         </form>
 
 

@@ -33,7 +33,7 @@
                    <p class="product-price">
                      <%= number_to_currency product.price %></p>
                    <p><%= product.description %></p>
-                   <%= button_to shop_path(product_id: product), class: 'btn btn-default' do %>
+                   <%= button_to product_items_path(product_id: product), class: 'btn btn-default' do %>
                        <i class="fa fa-shopping-cart"></i>
                      Add to cart</a>
                      <% end %>
