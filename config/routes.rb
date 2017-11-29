@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :product_items
   resources :orders
+
+get 'product/:number', to: 'pages#show', as: 'product', number: /\d+/
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
