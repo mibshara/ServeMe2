@@ -11,11 +11,11 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @contactPage = Page.find(1)
+    @contactPage = Page.find(2)
   end
 
   def about
-     @aboutPage = Page.find(2)
+     @aboutPage = Page.find(1)
   end
 
   def shop
