@@ -1,29 +1,29 @@
 <header class="secondary">
-<div class="background-image-holder parallax-background overlay">
-	<%= image_tag('bg-5.jpg', class: 'background-image',  alt: 'Background') %>
-</div>
+	<div class="background-image-holder parallax-background overlay">
+		<%= image_tag('bg-5.jpg', class: 'background-image',  alt: 'Background') %>
+	</div>
 
-<div class="container align-vertical hero">
-	<div class="row">
-		<div class="col-md-5 text-left">
-			<h1>Your Cart</h1>
-			<p>Our fruits are always freshly picked from our gardens or imported from our farms in South America. We take pride in all of our sweets and we bake it with extreme attention to detail, making sure thay everything we sell is healthy and meets standards</p>
-		</div>
-	</div><!--end of row-->
-</div><!--end of container-->
+	<div class="container align-vertical hero">
+		<div class="row">
+			<div class="col-md-5 text-left">
+				<h1>Your Cart</h1>
+				<p>Our fruits are always freshly picked from our gardens or imported from our farms in South America. We take pride in all of our sweets and we bake it with extreme attention to detail, making sure thay everything we sell is healthy and meets standards</p>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
 </header>
 
 <section class="product-list">
 	<div class="container">
-<div class="col-md-12">
-<h2>Cart Details</h2>
-<br>
-<%= render 'carts/cart' %>
-<br>
-<h5>Tota: <%= number_to_currency @cart.total_price %></h5>
-<br>
-<%= link_to 'Back to Store', shop_path%>
-<%= link_to 'Empty your cart', @cart, method: :delete, data: {confirm: 'Are you sure?'}%>
-</div>
+		<div class="col-md-12">
+			<h2>Cart Details</h2>
+			<br>
+			<%= render 'carts/cart' %>
+			<br>
+			<h5>Tota: <%= number_to_currency @cart.total_price %></h5>
+			<br>
+			<%= link_to 'Back to Store', shop_path%>
+			<%= link_to 'Empty your cart', @cart, method: :delete, data: {confirm: 'Are you sure?'}%>
+		</div>
 	</div>
 </section>
