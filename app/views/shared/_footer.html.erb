@@ -5,24 +5,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 text-left">
-        <h2 class="page-title">Join our newsletter</h2>
-        <p>Join now to learn about our new delecious products, a special product every month!.</p>
+        <h2 class="page-title">Search our products</h2>
       </div>
       <div class="col-md-4">
         <form class="newsletter-form">
-          <%= form_tag(shop_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search Sweets" %>
-  <%=submit_tag "Search", :name => nil, :class => "btn btn-primary" %>
+          <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search%>
+          <%= select_tag "categories" , options_from_collection_for_select(@categories, "id", "name"), include_blank: true %>
+          <%=submit_tag "Search", :name => nil, :class => "btn btn-primary" %>
         </form>
-
-
-
-
     </div>
     <% end %>
-      <div class="col-md-3">
-        <%= link_to 'Join Now', root_path, class: "btn btn-primary" %>
-      </div>
     </div><!--end of row-->
   </div><!--end of container-->
 </section>

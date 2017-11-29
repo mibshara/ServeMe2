@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:index, :show, :contact, :about, :shop]
+  before_action :set_cart, only: [:index, :show, :contact, :about, :shop, :search_results]
 
   def index
     @products = Product.all
+    @categories = Category.all
   end
 
   def show
@@ -15,14 +16,22 @@ class PagesController < ApplicationController
   end
 
   def about
-     @aboutPage = Page.find(1)
+    @aboutPage = Page.find(1)
   end
 
+
   def shop
-      if params[:search]
-      @products = Product.search(params[:search])
-      else
-      @products = Product.all
-      end
+    @products = Product.all
+    @categories = Category.all
+  end
+
+  def search_results
+    @categories = Category.all
+    if params[:categories] != ""
+      @result = Product.search(params[:search]).where("category_id = ?", params[:categories])
+    else
+      @result = Product.search(params[:search])
     end
+  end
+
 end

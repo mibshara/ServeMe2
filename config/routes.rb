@@ -13,4 +13,5 @@ get 'product/:number', to: 'pages#show', as: 'product', number: /\d+/
 
 get 'about', to: 'pages#about', as: 'about'
 get 'contact', to: 'pages#contact', as: 'contact'
+get 'search_results', to: 'pages#search_results', as: 'search_results'
 end

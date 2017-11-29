@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def self.search(search)
-      where("title LIKE ? OR description LIKE ? ", "%#{search}%", "%#{search}%")
+    @result =  Product.where("title LIKE ? OR description LIKE ? ", "%#{search}%", "%#{search}%")
     end
 
   def ensure_not_product_item
